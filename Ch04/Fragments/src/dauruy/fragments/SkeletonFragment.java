@@ -12,7 +12,7 @@ public class SkeletonFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		
-		return super.onCreateView(inflater, container, savedInstanceState);
-		//return inflater.inflate(resource, root, attachToRoot);
+		//return super.onCreateView(inflater, container, savedInstanceState);
+		return inflater.inflate(R.layout.skeleton_fragment, container, false);
 	}
 }

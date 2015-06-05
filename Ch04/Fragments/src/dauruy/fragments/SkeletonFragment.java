@@ -3,76 +3,95 @@ package dauruy.fragments;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 public class SkeletonFragment extends Fragment {
+
+    private static final String TAG = SkeletonFragment.class.getName();
+
+    public void showToast(String text) {
+        Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT).show();
+    }
 
 	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
-		System.out.println("onAttach");
+        Log.d(TAG, "onAttach");
+        showToast("onAttach");
 	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		System.out.println("onCreate");
+        Log.d(TAG, "onCreate");
+        showToast("onCreate");
 	}
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		System.out.println("onActivityCreated");
+        Log.d(TAG, "onActivityCreated");
+        showToast("onActivityCreated");
 	}
 
 	@Override
 	public void onStart() {
 		super.onStart();
-		System.out.println("onStart");
+        Log.d(TAG, "onStart");
+        showToast("onStart");
 	}
 
 	@Override
 	public void onResume() {
 		super.onResume();
-		System.out.println("onResume");
+        Log.d(TAG, "onResume");
+        showToast("onResume");
 	}
 
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
-		System.out.println("onSaveInstanceState");
+        Log.d(TAG, "onSaveInstanceState");
+        showToast("onSaveInstanceState");
 	}
 
 	@Override
 	public void onPause() {
 		super.onPause();
-		System.out.println("onPause");
+        Log.d(TAG, "onPause");
+        showToast("onPause");
 	}
 
 	@Override
 	public void onStop() {
 		super.onStop();
-		System.out.println("onStop");
+        Log.d(TAG, "onStop");
+        showToast("onStop");
 	}
 
 	@Override
 	public void onDestroyView() {
 		super.onDestroyView();
-		System.out.println("onDestroyView");
+        Log.d(TAG, "onDestroyView");
+        showToast("onDestroyView");
 	}
 
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		System.out.println("onDestroy");
+        Log.d(TAG, "onDestroy");
+        showToast("onDestroy");
 	}
 
 	@Override
 	public void onDetach() {
 		super.onDetach();
-		System.out.println("onDetach");
+        Log.d(TAG, "onDetach");
+        showToast("onDetach");
 	}
 
 	@Override
@@ -80,7 +99,8 @@ public class SkeletonFragment extends Fragment {
 			Bundle savedInstanceState) {
 		
 		//return super.onCreateView(inflater, container, savedInstanceState);
-		System.out.println("onCreateView");
+        Log.d(TAG, "onCreateView");
+        showToast("onCreateView");
 		return inflater.inflate(R.layout.skeleton_fragment, container, false);
 	}
 }

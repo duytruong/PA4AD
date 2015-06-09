@@ -11,6 +11,7 @@
 # Generated files
 bin/
 gen/
+libs/android-support-v4.jar
 
 # Gradle files
 .gradle/

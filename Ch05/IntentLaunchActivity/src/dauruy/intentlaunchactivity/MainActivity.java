@@ -2,6 +2,7 @@ package dauruy.intentlaunchactivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,7 +44,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(MainActivity.this, ShopActivity.class);
+        // Intent intent = new Intent(MainActivity.this, ShopActivity.class);
+        Intent intent = new Intent(Intent.ACTION_CALL,
+                Uri.parse("tel:841633924766"));
         startActivity(intent);
     }
 }
